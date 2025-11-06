@@ -105,18 +105,18 @@ class TestAppium(unittest.TestCase):
         self.driver.find_element(AppiumBy.XPATH, '//*[@resource-id="com.android.settings:id/search_action_bar"]/android.widget.ImageButton').click()
 
     def test_find_ancestor_element_by_xpath(self):
-        # 查找祖先元素。/ancestor:: 表示任意层级的祖先
+        # 查找祖先元素。ancestor:: 表示任意层级的祖先
         ele = self.driver.find_element(AppiumBy.XPATH, '//*[@text="声音"]/ancestor::android.widget.ScrollView')
         print(f'目标元素的resource-id为：{ele.get_attribute('resource-id')}')
 
     def test_find_parent_element_by_xpath(self):
-        # 查找父元素（直接上级元素）。可以用 /parent:: 表达，也可以用两个点 /.. 表达
+        # 查找父元素（直接上级元素）。可以用 parent:: 表达，也可以用两个点 .. 表达
         ele = self.driver.find_element(AppiumBy.XPATH, '//*[@resource-id="com.android.settings:id/homepage_container"]/..')
         print(f'父元素的类型为：{ele.get_attribute("className")}')
 
     def test_find_sibling_element_by_xpath(self):
         # 查找兄弟元素
-        # 往后查找兄弟元素 /following-sibling::
+        # 往后查找兄弟元素 following-sibling::
         ele = self.driver.find_element(AppiumBy.XPATH, '//*[@text="显示"]/following-sibling::android.widget.TextView')
         print(f'往后查找第一个类型为TextView的兄弟元素，文本内容为{ele.text}')
         # 往前查找兄弟元素 /preceding-sibling::
