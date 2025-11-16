@@ -1,8 +1,6 @@
 """
  run server with args:
- (1) appium --allow-insecure uiautomator2:chromedriver_autodownload
- or:
- (2) appium --config appium_config.json
+ appium --allow-insecure uiautomator2:chromedriver_autodownload
 """
 
 import unittest
@@ -27,7 +25,7 @@ capabilities = dict(
     platformName='android',
     automationName='uiautomator2',
     udid=dev_id,
-    app=f'{os.getcwd()}/app/AndroidDemoNew.apk',
+    app=f'{os.getcwd()}/AndroidDemoNew.apk',
     appPackage='com.example.androiddemo',
     appActivity='com.example.androiddemo.MainActivity',
     language='en',
