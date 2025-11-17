@@ -18,7 +18,6 @@
 }
 
 
-
 补充内容相关命令（重新安装Appium及相关驱动）：
 
 sudo appium driver uninstall uiautomator2 
@@ -42,4 +41,8 @@ nvm install --lts
 
 npm install -g appium
 appium driver install uiautomator2
+
+
+相关视频：
+https://www.youtube.com/watch?v=wCPNCWMDvFw
 
